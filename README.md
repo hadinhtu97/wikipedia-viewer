@@ -1,7 +1,7 @@
 # Wikipedia Viewer
 
 ## Description
-Search for Wikipedia articles by a specific topic.
+Using Widipedia API to search articles.
 
 ## User stories
 1. I can search Wikipedia entries in a search box and see the resulting Wikipedia entries.
@@ -15,3 +15,10 @@ npm install
 npm run build
 npm run start
 ```
+
+## APIs
+* GET: 
+  * `[]/api/search?s={something}` : receive maximum 10 articles with title, sort description and url on Wikipedia.
+
+## Demo
+[Link Demo](https://wikipedia-viewer.hadinhtu97.repl.co/)
