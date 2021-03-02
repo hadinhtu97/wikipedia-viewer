@@ -4,15 +4,16 @@
     justify-content: center;
     align-items: center;
     max-width: 900px;
-    margin: 7rem auto;
+    margin: 10rem auto;
     padding: 0 2rem;
 }
 
 .randomLink {
+    margin-top: 1rem;
     color: #fff;
     font-size: 1rem;
-    padding: 1rem;
     text-decoration: none;
+    outline: none;
 }
 
 .searchInput {
@@ -22,10 +23,18 @@
     border-radius: 1rem;
     border: none;
     outline: none;
-    width: 20rem;
+    width: 25rem;
 }
 
-@media(max-width:400px) {
+.searchInput::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background: #46ef46;
+}
+
+@media(max-width:500px) {
     .searchInput {
         width: auto;
     }
@@ -50,6 +59,7 @@
     color: #fff;
     padding: 1rem;
     text-decoration: none;
+    outline: none;
 }
 
 .content:hover {
@@ -58,5 +68,5 @@
 
 .title {
     font-size: 1.5rem;
-    font-weight:bold;
+    font-weight: bold;
 }
