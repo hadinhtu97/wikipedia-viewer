@@ -3,13 +3,17 @@ import Search from '../../modules/search'
 export default async (req, res) => {
     if (req.method == 'GET') {
         if (req.query.s == undefined) {
-            res.send('Required search query!')
+            res.send('Required s query!')
         } else {
-            let data = await Search(req.query.s);
-            if (data == null) {
-                res.send('Do not match any page in Wikipedia with search: ' + req.query.s)
-            } else {
-                res.json(data)
+            try {
+                let data = await Search(req.query.s);
+                if (data == null) {
+                    res.send('Do not match any page in Wikipedia with search: ' + req.query.s)
+                } else {
+                    res.json(data)
+                }
+            } catch (err) {
+                res.send('Some error happened. Try again latter.')
             }
         }
     } else {
