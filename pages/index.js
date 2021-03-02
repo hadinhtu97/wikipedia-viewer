@@ -38,11 +38,11 @@ const Home = () => {
                 <title>Wikipedia Viewer</title>
             </Head>
             <main className={styles.container}>
-                <form className={styles.form}>
+                <form className={styles.form} style={search == '' ? { height: '20rem' } : { height: '10rem' }}>
                     <input type='search' value={search} onChange={e => setSearch(e.target.value)} className={styles.searchInput} placeholder='press enter to search' />
                     <input type='submit' value="" onClick={getDataFromApiThenSetToState} className={styles.submitInput} />
+                    <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" className={styles.randomLink}>go to a random wiki</a>
                 </form>
-                <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" className={styles.randomLink}>go to a random wiki</a>
                 <div className={styles.contents}>
                     {
                         data == null ? <></> :

@@ -4,16 +4,16 @@
     justify-content: center;
     align-items: center;
     max-width: 900px;
-    margin: 10rem auto;
+    margin: 0 auto;
     padding: 0 2rem;
 }
 
-.randomLink {
-    margin-top: 1rem;
-    color: #fff;
-    font-size: 1rem;
-    text-decoration: none;
-    outline: none;
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: height 1s;
 }
 
 .searchInput {
@@ -42,6 +42,14 @@
 
 .submitInput {
     display: none;
+}
+
+.randomLink {
+    margin-top: 1rem;
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    outline: none;
 }
 
 .contents {
